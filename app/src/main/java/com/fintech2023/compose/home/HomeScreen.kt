@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.fintech2023.R
+import com.fintech2023.compose.favorites.FavoritesScreen
 import com.fintech2023.compose.popularlist.PopularScreen
 import com.fintech2023.data.Film
 import com.fintech2023.ui.theme.FilmsTheme
@@ -103,7 +104,7 @@ fun HomePagerScreen(
                 }
 
                 FilmPage.FAVORITES -> {
-
+                    FavoritesScreen(onClick = onFilmClick)
                 }
             }
         }

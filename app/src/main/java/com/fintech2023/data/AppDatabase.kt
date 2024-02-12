@@ -6,10 +6,9 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-//@Database(entities = [Film::class], version = 1, exportSchema = false)
+@Database(entities = [FilmInfo::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun filmDao(): FilmDao
-
 
     companion object {
         @Volatile
@@ -20,7 +19,6 @@ abstract class AppDatabase : RoomDatabase() {
                 instance ?: getDatabase(context).also { instance = it }
             }
         }
-
 
         fun getDatabase(context: Context): AppDatabase {
             return instance ?: synchronized(this) {

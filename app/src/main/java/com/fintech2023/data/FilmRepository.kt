@@ -20,9 +20,6 @@ class FilmRepository @Inject constructor(private val service: FilmService) {
         return service.filmDetails(id)
     }
 
-
-
-
     companion object {
         private const val NETWORK_PAGE_SIZE = 20
     }

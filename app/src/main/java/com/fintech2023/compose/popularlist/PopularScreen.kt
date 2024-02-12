@@ -29,7 +29,8 @@ fun PopularScreen(
         FilmsList(
             films = viewModel.films,
             onFilmClick = onFilmClick,
-            modifier = Modifier.padding(padding)
+            modifier = Modifier.padding(padding),
+            onLongFilmClick = { film -> viewModel.saveFilmInfo(film) }
         )
     }
 }

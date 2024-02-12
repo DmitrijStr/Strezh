@@ -34,7 +34,7 @@ import com.fintech2023.data.Film
 fun FilmListItem(
     film: Film,
     onClick: () -> Unit,
-    onLongClick: () -> Unit
+    onLongClick: () -> Unit = {}
 ) {
     OutlinedCard(
         colors = CardDefaults.cardColors(

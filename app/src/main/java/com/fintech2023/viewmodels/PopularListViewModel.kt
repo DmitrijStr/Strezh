@@ -6,6 +6,7 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.fintech2023.data.Film
 import com.fintech2023.data.FilmRepository
+import com.fintech2023.data.LocalFilmRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -16,7 +17,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PopularListViewModel @Inject constructor(
-    private val repository: FilmRepository
+    private val repository: FilmRepository,
+    private val localFilmRepository: LocalFilmRepository
 ) : ViewModel() {
 
     private val _films = MutableStateFlow<PagingData<Film>?>(null)
@@ -24,6 +26,12 @@ class PopularListViewModel @Inject constructor(
 
     init {
         getData()
+    }
+
+    fun saveFilmInfo(film: Film) {
+        viewModelScope.launch {
+            localFilmRepository.createFilm(film)
+        }
     }
 
     private fun getData() {

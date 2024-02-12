@@ -24,5 +24,4 @@ class DatabaseModule {
     fun provideFilmDao(appDatabase: AppDatabase): FilmDao {
         return appDatabase.filmDao()
     }
-
 }
