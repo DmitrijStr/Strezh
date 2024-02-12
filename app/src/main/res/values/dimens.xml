@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_side_margin">15dp</dimen>
+    <dimen name="card_bottom_margin">15dp</dimen>
+    <dimen name="card_height">93dp</dimen>
+
+    <dimen name="card_heigh1t">533dp</dimen>
+
+    <dimen name="film_item_image_width">40dp</dimen>
+    <dimen name="film_item_image_height">63dp</dimen>
+
+    <dimen name="image_round_corners">5dp</dimen>
+</resources>

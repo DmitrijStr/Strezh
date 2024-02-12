@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Films</string>
+
+    <string name="popular_films_title">Популярные</string>
+    <string name="fav_films_title">Избранное</string>
+    <string name="loading_error">Произошла ошибка при загрузке данных, проверьте подключение к сети</string>
+    <string name="loading_progress">Данные загружаются</string>
+    <string name="genres">Жанры:</string>
+    <string name="countries">Страны:</string>
+
+    <!-- Accessibility -->
+    <string name="film_detail_image_content_description">poster of a film</string>
+</resources>
